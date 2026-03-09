@@ -1,0 +1,66 @@
+package com.aluracursos.screenmatch.models;
+
+public class Titulo {
+    private String nombre;
+    private int fechaLanzamiento;
+    private int duracionMinutos;
+    private boolean incluidoEnPlan;
+
+    private double sumaEvaluaciones;
+    private int totalDeEvaluaciones;
+
+
+    public String getNombre() {
+        return nombre;
+    }
+
+    public int getFechaLanzamiento() {
+        return fechaLanzamiento;
+    }
+
+    public int getDuracionMinutos() {
+        return duracionMinutos;
+    }
+
+    public boolean isIncluidoEnPlan() {
+        return incluidoEnPlan;
+    }
+
+    public int getTotalDeEvaluaciones(){
+        return totalDeEvaluaciones;
+    }
+
+
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
+
+    public void setFechaLanzamiento(int fechaLanzamiento) {
+        this.fechaLanzamiento = fechaLanzamiento;
+    }
+
+    public void setDuracionMinutos(int duracionMinutos) {
+        this.duracionMinutos = duracionMinutos;
+    }
+
+    public void setIncluidoEnPlan(boolean incluidoEnPlan) {
+        this.incluidoEnPlan = incluidoEnPlan;
+    }
+
+
+    public void muestraFichaTecnica(){
+        System.out.println("La película es: " + nombre );
+        System.out.println("Fecha de lanzamiento: " + fechaLanzamiento);
+        System.out.println("Duración en minutos: " + getDuracionMinutos());
+    }
+
+    public void evalua(double nota){
+        sumaEvaluaciones += nota;
+        totalDeEvaluaciones++;
+    }
+
+    public double calculaMedia(){
+        return sumaEvaluaciones / totalDeEvaluaciones;
+    }
+}
+
